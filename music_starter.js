@@ -7,9 +7,24 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   textFont('Verdana'); // please use CSS safe fonts
   rectMode(CENTER)
   textSize(24);
-  frameRate(24);
+  frameRate(12);
   currentFrame = frameCount % numFrames;
-  image(drummerarm[currentFrame], 0, 0);
+  
+  push();
+  scale(0.2);
+  if(drum > 40){
+  image(drummerarm[currentFrame], 3, 0);
+  }
+  else{
+    image(drummerarm[0], 3, 0);
+  }
+  pop();
+
+  push();
+  scale(0.2);
+  image(img2, 3, 0);
+  pop();
+
 
   //ellipse(350,100,100,100)
   //ellipse(350,100,50,50)
@@ -18,8 +33,13 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
 //let mouthsize = map(vocal,0,100,60,200)
   //rect(400,250,200,mouthsize)
   //Image(img, 100, 100)
-  let mouthsize = map(vocal,0,2,4,2)
-  ellipse(272,325,4,mouthsize-5)
+  fill (0)
+  let mouthsize = map(vocal,0,100,2,15)
+  ellipse(270,325,4,mouthsize-5)
+
+  
+
+  
 
 
 }

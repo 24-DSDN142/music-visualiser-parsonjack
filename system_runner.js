@@ -44,7 +44,8 @@ function preload() {
   table = loadTable('volumes.csv', 'csv');
   words = loadStrings('words.txt');
   //img = loadImage('moon.png')
-  img = loadImage('rats.png')
+  img = loadImage('Billysrats.png')
+  img2 = loadImage('rats_shading.png')
   for (let i = 0; i < numFrames; i++) {
 
     drummerarm [i] = loadImage("images (moving)/drummer/" + nf(i, 4) + ".png"); 

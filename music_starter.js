@@ -2,6 +2,7 @@ let numFrames = 4;
 let currentFrame =0;
 let drummerarm = [];
 let violinistarm = [];
+let pianistarm = [];
 // vocal, drum, bass, and other are volumes ranging from 0 to 100
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
   background(img)
@@ -14,7 +15,7 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   push();
   scale(0.2);
   //if(drum > 45 && drum < 55){
-  if(drum > 45){
+  if(drum > 37){
   image(drummerarm[currentFrame], 3, 0);
   }
   else{
@@ -24,8 +25,7 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
 
   push();
   scale(0.2);
-  //if(drum > 45 && drum < 55){
-  if(bass > 45){
+  if(bass > 60){
   image(violinistarm[currentFrame], 3, 0);
   }
   else{
@@ -33,8 +33,17 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   }
   pop();
 
+  push();
+  scale(0.2);
+  if(other > 40){
+  image(pianistarm[currentFrame], 3, 0);
+  }
+  else{
+    image(pianistarm[0], 3, 0);
+  }
+  pop();
 
-
+  
   push();
   scale(0.2);
   image(img2, 3, 0);

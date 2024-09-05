@@ -56,6 +56,12 @@ function preload() {
       violinistarm [i] = loadImage("images (moving)/violinist/violinist.frame" + nf(i, 4) + ".png"); 
   
       }
+    
+    for (let i = 0; i < numFrames; i++) {
+  
+      pianistarm [i] = loadImage("images (moving)/pianist/pianist.frame" + nf(i, 4) + ".png"); 
+    
+        }
 
 
 }

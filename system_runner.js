@@ -51,6 +51,11 @@ function preload() {
     drummerarm [i] = loadImage("images (moving)/drummer/" + nf(i, 4) + ".png"); 
 
     }
+  for (let i = 0; i < numFrames; i++) {
+
+      violinistarm [i] = loadImage("images (moving)/violinist/violinist.frame" + nf(i, 4) + ".png"); 
+  
+      }
 
 
 }

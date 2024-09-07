@@ -58,8 +58,11 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   //rect(400,250,200,mouthsize)
   //Image(img, 100, 100)
   fill (0)
-  let mouthsize = map(vocal,0,100,4,15)
-  ellipse(270,325,4,mouthsize-4)
+  let mouthsize = map(vocal,0,100,0,15)
+  ellipse(270,325,4,mouthsize-2)
+  if (mouthsize < 0){
+    mouthsize =4
+  }
 
   
 

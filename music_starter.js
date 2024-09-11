@@ -15,7 +15,7 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   push();
   scale(0.2);
   //if(drum > 45 && drum < 55){
-  if(drum > 40){
+  if(drum > 43){
   image(drummerarm[currentFrame], 3, 0);
   }
   else{
@@ -25,7 +25,7 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
 
   push();
   scale(0.2);
-  if(bass > 60){
+  if(bass > 65){
   image(violinistarm[currentFrame], 3, 2);
   }
   else{

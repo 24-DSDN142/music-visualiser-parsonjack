@@ -1,5 +1,5 @@
-const canvasWidth = 540;
-const canvasHeight = 960;
+const canvasWidth = 500;
+const canvasHeight = 500;
 
 
 let mainCanvas;
@@ -43,6 +43,27 @@ function songLoadedSoFar(soFar) {
 function preload() {
   table = loadTable('volumes.csv', 'csv');
   words = loadStrings('words.txt');
+  //img = loadImage('moon.png')
+  img = loadImage('Billysrats.png')
+  img2 = loadImage('rats_shading.png')
+  for (let i = 0; i < numFrames; i++) {
+
+    drummerarm [i] = loadImage("images (moving)/drummer/" + nf(i, 4) + ".png"); 
+
+    }
+  for (let i = 0; i < numFrames; i++) {
+
+      violinistarm [i] = loadImage("images (moving)/violinist/violinist.frame" + nf(i, 4) + ".png"); 
+  
+      }
+    
+    for (let i = 0; i < numFrames; i++) {
+  
+      pianistarm [i] = loadImage("images (moving)/pianist/pianist.frame" + nf(i, 4) + ".png"); 
+    
+        }
+
+
 }
 
 let volumes = [];
